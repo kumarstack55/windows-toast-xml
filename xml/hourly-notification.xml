@@ -1,0 +1,17 @@
+<toast scenario="reminder">
+  <visual>
+    <binding template="ToastGeneric">
+      <text hint-maxLines="1">Hourly notification</text>
+      <text>Be prepared for the next work.</text>
+    </binding>
+  </visual>
+  <actions>
+    <input id="snoozeTime" type="selection" defaultInput="5">
+      <selection id="3" content="3 minutes"/>
+      <selection id="5" content="5 minutes"/>
+      <selection id="30" content="30 minutes"/>
+    </input>
+    <action activationType="system" arguments="snooze" hint-inputId="snoozeTime" content="" />
+    <action activationType="system" arguments="dismiss" content=""/>
+  </actions>
+</toast>
